@@ -52,7 +52,16 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
+const canWeDeliver = zipCode => {
+    result = deliveryAreaZipCodes.includes(zipCode)
+    if(result === true){
+        return "You're in our deliver zone!";
+    } else 
+        return "Sorry, we can't deliver to that address";
+}
 
+console.log(canWeDeliver(80205))
+console.log(canWeDeliver(85205))
 
 /* 
     Problem 2 Continued
@@ -72,6 +81,26 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+
+const canWeDeliverTwo = zipCode => {
+    for (i = 0; i <= deliveryAreaZipCodes.length - 1;){
+        if(zipCode === deliveryAreaZipCodes[i]){
+            return "You're in our deliver zone!";
+        }else 
+        i++
+    }   
+    return "Sorry, we can't deliver to that address";
+}
+
+console.log('**********Deliver function 2**********')
+console.log('false test:', canWeDeliverTwo(80205))
+console.log(canWeDeliverTwo(85205))
+console.log(canWeDeliverTwo(85206))
+console.log(canWeDeliverTwo(85213))
+console.log(canWeDeliverTwo(85203))
+console.log(canWeDeliverTwo(85204))
+console.log('false test:', canWeDeliverTwo(85209))
+
 
 
 //////////////////PROBLEM 3////////////////////
