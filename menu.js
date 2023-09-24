@@ -32,6 +32,15 @@
 
 //CODE HERE
 
+const pizza = {
+    name: 'Vegeroni',
+    price: 15,
+    category: 'entree',
+    popularity: 3,
+    rating: 4.5,
+    tags: ['Vegan', 'gluten-free']
+}
+
 
 
 //////////////////PROBLEM 2////////////////////
@@ -44,6 +53,7 @@
 
 //CODE HERE
 
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
