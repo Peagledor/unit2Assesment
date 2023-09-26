@@ -64,6 +64,7 @@ console.log(pizza.popularity)
 
 //CODE HERE
 
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -74,6 +75,8 @@ console.log(pizza.popularity)
 
 //CODE HERE
 
+let {price} = pizza
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -84,6 +87,8 @@ console.log(pizza.popularity)
 
 //CODE HERE
 
+let {category} = pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -99,7 +104,20 @@ console.log(pizza.popularity)
 
 //CODE HERE
 
+class Food {
+    constructor(name, price, category, popularity, rating, tags){
+        this.name = name;
+        this.price = price;
+        this.category = category;
+        this.popularity = popularity;
+        this.rating = rating;
+        this.tags = tags;
+    }
+}
 
+const foodArr = [new Food('Pasta', 10, 'Italian', 2, 4.9, [, 'A la carte']), new Food('Soup', 8, 'Soups & Stews', 5, 4.0, ['Vegan', 'Vegetarian']), new Food('Tacos', 6, 'entree', 4, 5.0, ['Vegan', 'Vegetarian', 'Pescatarian']), new Food('Surf & Truf', 20, 'entree', 1, 5.0, ['gluten-free', 'dairy free']), new Food('Salad', 7, 'Appetizers', 3, 4.8, ['Vegan', 'Dairy-free', 'gluten-free', 'Vegetarian', 'Pescatarian'])]
+
+console.log(foodArr)
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -115,9 +133,8 @@ console.log(pizza.popularity)
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
-
+const filteredFood = foodArr.filter((element) => element.tags.includes('Pescatarian'))
+console.log('filtered:',filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -160,6 +177,17 @@ console.log(pizza.popularity)
 
 //CODE HERE
 
+//filterByProperty function takes in property, number, type
+const filterByProperty = (propStr, num, type) => {
+    property = propStr;
+    num = num;
+    type = type;
+
+    let filteredArr = foodArr.filter((element)=>{
+        type === 'above'?element > num:type === 'below'?element < num;
+    })
+    return filteredArr
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -169,3 +197,5 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
+
+filterByProperty('rating', 4, 'below')
