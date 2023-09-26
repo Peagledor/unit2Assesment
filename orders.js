@@ -31,7 +31,6 @@
 
 //CODE HERE
 
-<<<<<<< HEAD
 class Ticket{
     constructor(items, orderTime, customerId){
         this.items = items;
@@ -46,8 +45,6 @@ class Ticket{
     }
 }
 
-=======
->>>>>>> fe7d0c61c860103dfd1e355534ca23d74ac53f5c
 
 
 /*
