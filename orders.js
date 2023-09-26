@@ -40,8 +40,7 @@ class Ticket{
     }
 
     updateStatus(status){
-        console.log(`The order for customer ${customerId} is
-        now ${status}.`)
+        console.log('The order for customer ' + this.customerId +' is now ' + status +'.')
     }
 }
 
@@ -75,4 +74,3 @@ console.log(firstTicket.status)
 
 firstTicket.updateStatus('cooking')
 
-console.log(firstTicket.status)
